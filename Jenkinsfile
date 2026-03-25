@@ -34,14 +34,14 @@ pipeline {
         }
 
         stage('Deploy') {
-    steps {
-        sh '''
-        docker build -t json-formatter .
-        docker stop json-container || true
-        docker rm json-container || true
-        docker run -d -p 8081:80 --name json-container json-formatter
-        '''
-    }
-}
+            steps {
+                sh '''
+                docker build -t json-formatter .
+                docker stop json-container || true
+                docker rm json-container || true
+                docker run -d -p 8081:80 --name json-container json-formatter
+                '''
+            }
+        }
     }
 }

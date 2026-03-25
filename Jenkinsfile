@@ -1,17 +1,13 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'node'
-    }
-
     stages {
 
         stage('Clone') {
-    steps {
-        git branch: 'main', url: 'https://github.com/i-kjain/Json_formatter.git'
-    }
-}
+            steps {
+                git branch: 'main', url: 'https://github.com/i-kjain/Json_formatter.git'
+            }
+        }
 
         stage('Install') {
             steps {
@@ -21,7 +17,7 @@ pipeline {
 
         stage('Compile') {
             steps {
-                sh 'echo "No compile needed for JS"'
+                sh 'echo "No compile needed"'
             }
         }
 
@@ -39,7 +35,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo "Deployment step (static hosting)"
+                echo "Deploy step"
             }
         }
     }

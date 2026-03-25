@@ -8,10 +8,10 @@ pipeline {
     stages {
 
         stage('Clone') {
-            steps {
-                git 'https://github.com/i-kjain/Json_formatter.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/i-kjain/Json_formatter.git'
+    }
+}
 
         stage('Install') {
             steps {

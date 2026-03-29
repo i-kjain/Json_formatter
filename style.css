@@ -39,8 +39,8 @@
 }
 
 .button--magnify {
-    /* background-color: rgb(18, 86, 175); */
-    background-color: rgb(16, 8, 14);
+    background-color: rgb(18, 86, 175);
+   
 }
 
 .button--format:active {
